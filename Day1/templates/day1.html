@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Name Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d3b2eb;
+            padding: 20px;
+        }
+        h1 {
+            color: #420469;
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 300px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #420469;
+            color: white;
+            border-radius: 10px 10px;
+            border-color: #420469;
+            border-style: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #5f188b;
+        }
+        h2 {
+            color: #420469;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Band Name Generator</h1>
+    <form method="POST">
+        <label for="city">What's the name of the city you grew up in?</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="pet">What's your pet's name?</label>
+        <input type="text" id="pet" name="pet" required>
+
+        <input type="submit" value="Generate Band Name">
+    </form>
+
+    {% if band_name %}
+        <h2>Your band name could be: {{ band_name }}</h2>
+    {% endif %}
+</body>
+</html>
