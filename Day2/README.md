@@ -1,4 +1,4 @@
-# 💸 Tip Calculator Web Application
+# 💸 Tip Calculator 
 
 Welcome to the **Tip Calculator** project! This simple web application helps users calculate how much each person should pay when splitting a bill, including tips.
 
