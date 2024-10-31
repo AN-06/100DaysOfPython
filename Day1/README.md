@@ -1,4 +1,4 @@
-# 🎸 Day 1: Band Name Generator
+# 🎸 Band Name Generator
 
 Welcome to the **Band Name Generator** project! This is the first project in my #100DaysOfPython challenge.
 
