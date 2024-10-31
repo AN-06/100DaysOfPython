@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <style>
+        /* Internal CSS with blue tones and simplified layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            color: #003366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1em;
+            display: block;
+            margin-top: 10px;
+            color: #004080;
+        }
+
+        input[type="number"],
+        select {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #66b2ff;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007acc;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 90%;
+        }
+
+        button:hover {
+            background-color: #005999;
+        }
+
+        h2 {
+            color: #005999;
+            margin-top: 20px;
+        }
+
+        .error {
+            color: #cc0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to the Tip Calculator!</h1>
+        
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        
+        <form action="/calculate" method="post">
+            <label for="bill">What was the total bill?</label>
+            <input type="number" step="0.01" id="bill" name="bill" required>
+
+            <label for="tip_percentage">How much tip would you like to give?</label>
+            <select id="tip_percentage" name="tip_percentage" required>
+                <option value="10">10%</option>
+                <option value="12">12%</option>
+                <option value="15">15%</option>
+            </select>
+
+            <label for="people">How many people to split the bill?</label>
+            <input type="number" id="people" name="people" min="1" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        {% if per_person %}
+            <h2>Each person should pay: ${{ per_person }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
