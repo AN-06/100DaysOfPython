@@ -39,18 +39,18 @@ Before running the app, make sure you have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/treasure-island-game.git
+   git clone https://github.com/your-username/100DaysOfPython.git
    cd treasure-island-game
    ```
 
 
-2. Install the required Python packages:
+2. Navigate to the directory:
 
    ```bash
-   pip install -r requirements.txt
+    cd 100DaysOfPython/Day3
    ```
    
-3. If you don't have a requirements.txt file, install Flask directly:
+3. Install Flask :
 
     ```bash
      pip install Flask
