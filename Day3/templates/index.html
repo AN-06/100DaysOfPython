@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Island Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8dc;
+            color: #6b4f31;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* Stack elements vertically */
+        }
+        h1 {
+            color: #d4af37;
+        }
+        p {
+            font-size: 18px;
+        }
+        img {
+            width: 400px; 
+            height: 400px; 
+            object-fit: cover; 
+            margin-bottom: 20px; 
+        }
+        form {
+            background: #ffeb99;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px; 
+        
+            }
+            .form-group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group input[type="radio"] {
+            margin-left: 10px; 
+        }
+        button {
+            background-color: #d4af37;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #b8860b;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #6b4f31;
+            font-weight: bold;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to Treasure Island</h1>
+        <p>Your mission is to find the treasure.</p>
+    </div>
+    
+    <div class="content">
+        <img src="static/treasure.jpg" alt="Treasure Chest">
+
+        {% if result %}
+            <h2>{{ result }}</h2>
+            <a href="/">Play Again</a>
+            {% else %}
+            <form method="POST">
+                {% if step == 1 %}
+                    <div class="form-group">
+                        <label>You're at a crossroad. Where do you want to go?</label>
+                        <input type="radio" name="choice1" value="left" required> Left
+                        <input type="radio" name="choice1" value="right" required> Right
+                    </div>
+                {% elif step == 2 %}
+                    <div class="form-group">
+                        <label>You've come to a lake. What do you do?</label>
+                        <input type="radio" name="choice2" value="wait" required> Wait for a boat
+                        <input type="radio" name="choice2" value="swim" required> Swim across
+                    </div>
+                {% elif step == 3 %}
+                    <div class="form-group">
+                        <label>You reached an island with three doors. Pick one:</label>
+                        <input type="radio" name="choice3" value="red" required> Red Door
+                        <input type="radio" name="choice3" value="yellow" required> Yellow Door
+                        <input type="radio" name="choice3" value="blue" required> Blue Door
+                    </div>
+                {% endif %}
+                
+                <button type="submit">Submit</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>
