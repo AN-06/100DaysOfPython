@@ -35,12 +35,12 @@ Based on these inputs, the application calculates how much each person should co
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/yourusername/tip-calculator.git
+   git clone https://github.com/yourusername/100DaysOfPython.git
    ```
 2. Navigate to the Project Directory:
 
    ```bash
-   cd tip-calculator
+   cd 100DaysOfPython.git/Day2
    ```
    
 3. Install Flask (if you haven't already):
