@@ -40,7 +40,7 @@ Based on these inputs, the application calculates how much each person should co
 2. Navigate to the Project Directory:
 
    ```bash
-   cd 100DaysOfPython.git/Day2
+   cd 100DaysOfPython/Day2
    ```
    
 3. Install Flask (if you haven't already):
