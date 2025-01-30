@@ -34,7 +34,7 @@ Before running the app, make sure you have the following installed:
 - Python 3.x
 - Flask
 
-## 📈 Installation
+## 🚀 Installation
 
 1. Clone this repository:
 
