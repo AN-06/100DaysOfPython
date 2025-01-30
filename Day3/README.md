@@ -44,7 +44,7 @@ Before running the app, make sure you have the following installed:
    ```
 
 
-2. Navigate to the directory:
+2. Navigate to the Project Directory:
 
    ```bash
     cd 100DaysOfPython/Day3
